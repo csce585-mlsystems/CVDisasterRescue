@@ -40,28 +40,28 @@ if YOLO_TYPE                == "yolov3":
 # Train options
 TRAIN_YOLO_TINY             = True # False
 TRAIN_SAVE_BEST_ONLY        = True # saves only best model according validation loss (True recommended)
-TRAIN_SAVE_CHECKPOINT       = False # saves all best validated checkpoints in training process (may require a lot disk space) (False recommended)
+TRAIN_SAVE_CHECKPOINT       = True # saves all best validated checkpoints in training process (may require a lot disk space) (False recommended)
 TRAIN_CLASSES               = "data/license_plate_names.txt"
 TRAIN_ANNOT_PATH            = "data/Dataset/train/license_plate_train.txt"
 TRAIN_LOGDIR                = "training_logs"
 TRAIN_CHECKPOINTS_FOLDER    = "training_checkpoints"
 TRAIN_MODEL_NAME            = f"{YOLO_TYPE}_human_detection"
 TRAIN_LOAD_IMAGES_TO_RAM    = True # With True faster training, but need more RAM
-TRAIN_BATCH_SIZE            = 4
+TRAIN_BATCH_SIZE            = 64 # originally 4, push to 32 maybe?
 TRAIN_INPUT_SIZE            = 416
 TRAIN_DATA_AUG              = True
 TRAIN_TRANSFER              = False # can be run after any sort of model is generated
-TRAIN_FROM_CHECKPOINT       = False # "checkpoints/yolov3_custom"
+TRAIN_FROM_CHECKPOINT       = True
 TRAIN_LR_INIT               = 1e-4
 TRAIN_LR_END                = 1e-6
-TRAIN_WARMUP_EPOCHS         = 2
+TRAIN_WARMUP_EPOCHS         = 0
 TRAIN_EPOCHS                = 50
 
 # TEST options
 TEST_ANNOT_PATH             = "data/Dataset/train/license_plate_train.txt"
-TEST_BATCH_SIZE             = 4 #tune
-TEST_INPUT_SIZE             = 416 #tune
-TEST_DATA_AUG               = False #tune
+TEST_BATCH_SIZE             = 256 # tune, originally 4
+TEST_INPUT_SIZE             = 416 # tune
+TEST_DATA_AUG               = False # tune
 TEST_DECTECTED_IMAGE_PATH   = ""
 TEST_SCORE_THRESHOLD        = 0.3 #tune
 TEST_IOU_THRESHOLD          = 0.45 #tune
