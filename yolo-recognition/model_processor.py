@@ -8,4 +8,3 @@ yolo.load_weights(checkpoint)
 
 print(yolo)
 yolo.save(save_dest)
-yolo.save_weights(save_dest + '.h5')
