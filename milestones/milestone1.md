@@ -2,7 +2,7 @@
 documentclass: article
 classoption: 
 title: "CSCE 585: Machine Learning Systems: 
-Project Proposal: Computer Vision Assisted Disaster Rescue"
+Milestone 1: Computer Vision Assisted Disaster Rescue"
 institute: UofSC
 date: \today
 colorlinks: true
@@ -31,3 +31,7 @@ Our real-time detection model will be trained from the dataset referenced above 
 
 # Preliminary Results
 We trained our model once over 50 epochs with a batch size of 64 images using an AMD Radeon Pro 560X. Plotted below is a figure of how our model performed in regards to validation loss while training.
+![training_total_validation_loss](training_total_validation_loss.png)
+
+Early results are promising given the increased batch size and sparse GPU resources, lowering the total loss value from 26.58 to 13.15 over the training session. Our team will be requesting and using stronger, dedicated GPU resources to train the model again with a smaller batch size. Upon attempting to make inferences with the model, we came to find that our images had not been standardized via preprocessing both by number of channels per image as well as size. 
+For the next training session, the training set will be altered to only use color images and a consistent size of 1024 by 1024 pixels each.
