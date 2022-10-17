@@ -1,27 +1,21 @@
-
-from pickletools import optimize
 import numpy as np
 from pathlib import Path
-from PIL import Image
-import tensorflow as tf
-from tensorflow import keras, expand_dims
-from keras.models import load_model, Model
 from yolov3.configs import *
-from yolov3.yolov4 import Create_Yolo
-from yolov3.evaluate_mAP import get_mAP
-from yolov3.dataset import Dataset
-from matplotlib import pyplot
-import cv2, os
+from yolov3.utils import Load_Yolo_model, detect_image, detect_realtime
+import cv2, os, random
 
-MODEL_PATH = 'model/yolov3_human_detection_Tiny'
-TRAIN_CLASS_LIST = ['Human_head', 'Human_leg', 'Human_hand', 'Human_foot', 'Human_body', 'Human_arm']
-anchors = YOLO_ANCHORS
-checkpoint_path = os.path.dirname('training_checkpoints')
+dataset_types = ['train', 'test', 'validation']
 
-model = Create_Yolo(input_size=416, training=False, CLASSES=TRAIN_CLASSES)
-model.load_weights('model/yolov3_human_detection_Tiny.h5')
+def generate_random_file_path(): # used to pick a random image and test with
+    root = f'data/Dataset/{random.choice(dataset_types)}/{random.choice(TRAIN_CLASSES)}/'
+    suffix = random.choice([file for file in os.listdir(root) if file.endswith('.jpg')])
+    print(suffix)
+    print('Path: ' + f'{root}{suffix}')
+    return f'{root}{suffix}'
 
-test_image_path = 'data/Dataset/test/Human_leg/0c77133742ceb85e.jpg'
-# print(model.summary())
+# test_image_path = generate_random_file_path()
 
-input_w, input_h = 416, 416
+model = Load_Yolo_model()
+# detect_image(model, test_image_path, '', input_size=YOLO_INPUT_SIZE, show=True, CLASSES=TRAIN_CLASSES, rectangle_colors=(255,0,0))
+
+detect_realtime(model, '', input_size=YOLO_INPUT_SIZE, show=True, CLASSES=TRAIN_CLASSES, rectangle_colors=(255, 0, 0))
