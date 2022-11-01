@@ -6,7 +6,7 @@ from yolov3.utils import Load_Yolo_model, detect_image, detect_realtime, detect_
 import cv2, os
 
 model = Load_Yolo_model() # loads our Yolo model (Keras functional model) from checkpoints folder saved in TFRecord format currently
-root_test_data_dir = 'OID/Dataset/test'
+root_test_data_dir = 'data/Dataset/test'
 test_subsets = ['Human_leg', 'Human_head', 'Human_hand', 'Human_foot', 'Human_body', 'Human_arm']
 
 def nms_iou(bboxes, iou_threshold, sigma=0.3, method='nms'):
@@ -46,10 +46,10 @@ def nms_iou(bboxes, iou_threshold, sigma=0.3, method='nms'):
     return iou_scores, best_bboxes
 
 test_item_count = 0
-total_iou_score = 0
-bbox_count = 0
+total_iou_score = 0 # images with multiple bounding boxes will have IoU scores for each one
+undetectable_images = 0
+
 for subset in test_subsets:
-    # print(os.path.join(root_test_data_dir, subset))
     for image_path in Path(os.path.join(root_test_data_dir, subset)).glob('*.jpg'):
         original_image      = cv2.imread(str(image_path))
         original_image      = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
@@ -62,13 +62,13 @@ for subset in test_subsets:
         predicted_bbox = tf.concat(predicted_bbox, axis=0)
 
         bboxes = postprocess_boxes(predicted_bbox, original_image, YOLO_INPUT_SIZE, 0.2)
-        iou_scores, bboxes = nms_iou(bboxes, 0, method='nms')
+        iou_scores, best_bboxes = nms_iou(bboxes, 0, method='nms')
         test_item_count += 1
-        bbox_count += len(bboxes)
         for i in range(0, len(iou_scores)):
             try:
                 total_iou_score += iou_scores[i]
             except:
                 total_iou_score += 0
+                undetectable_images += 1
 
-print(f'Number of test images: {test_item_count}\nTotal number of bounding boxes: {bbox_count}\nAverage IoU score per image: {total_iou_score / test_item_count}\nAverage IoU score per bounding box: {total_iou_score / bbox_count}')
+print(f'Number of test images: {test_item_count}\nNumber of images that our model could not draw bounding boxes for: {undetectable_images}\nBounding box draw success rate: {(test_item_count - undetectable_images) / test_item_count}\nAverage IoU score per image: {total_iou_score[0] / test_item_count}\nAverage IoU score per successful image: {total_iou_score[0] / (test_item_count - undetectable_images)}')
