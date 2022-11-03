@@ -34,14 +34,14 @@ flags.DEFINE_float('score', 0.75, 'score threshold')
 #                         1. Set device                             #
 # ================================================================= #
 # %% 01. 프로세스 장비 설정 
-physical_devices = tf.config.list_physical_devices('GPU')   # GPU 장치 목록 출력; 
-                                                            # (ref) https://stackoverflow.com/questions/58956619/tensorflow-2-0-list-physical-devices-doesnt-detect-my-gpu
+# physical_devices = tf.config.list_physical_devices('GPU')   # GPU 장치 목록 출력; 
+#                                                             # (ref) https://stackoverflow.com/questions/58956619/tensorflow-2-0-list-physical-devices-doesnt-detect-my-gpu
 
-if physical_devices:
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+# if physical_devices:
+#     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
-else: 
-    print("No GPU")
+# else: 
+#     print("No GPU")
 
 
 
