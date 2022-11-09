@@ -1,2 +1,0 @@
-model_checkpoint_path: "yolov3_human_detection_Tiny"
-all_model_checkpoint_paths: "yolov3_human_detection_Tiny"
