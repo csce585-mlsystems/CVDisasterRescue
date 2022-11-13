@@ -1,24 +1,22 @@
-# -*- coding: utf-8 -*-
-
-
-# %%
-import os.path as osp 
 import time 
 import cv2 
 import numpy as np 
 from PIL import Image
-from absl import app, flags, logging  # argparse 대용인가?; (ref) https://github.com/abseil/abseil-py
+from absl import app, flags
 from absl.flags import FLAGS
 import tensorflow as tf 
 from tensorflow.python.saved_model import tag_constants
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 
+# ###
+# tf.config.threading.set_inter_op_parallelism_threads(0) # 0 denotes an appropriate number of threads for the system
+# tf.config.threading.set_intra_op_parallelism_threads(0)
+# ### 
+
 import core.utils as utils
 from core.yolov4 import filter_boxes
 
-
-#%% argparse 
 flags.DEFINE_string('framework', 'tflite', 'TF lite' )
 flags.DEFINE_string('weights', './checkpoints/yolov4-tiny-416.tflite', 'path to weights file')
 flags.DEFINE_integer('size', 416, 'resize images to')
@@ -28,20 +26,6 @@ flags.DEFINE_string('output', 'result.png', 'path to output image')
 flags.DEFINE_float('iou', 0.45, 'iou threshold')
 flags.DEFINE_float('score', 0.45, 'score threshold')
 flags.DEFINE_boolean('dis_cv2_window', False, 'disable cv2 window during the process') # this is good for the .ipynb
-
-
-# ================================================================= #
-#                         1. Set device                             #
-# ================================================================= #
-# %% 01. 프로세스 장비 설정 
-# physical_devices = tf.config.list_physical_devices('GPU')   # GPU 장치 목록 출력; 
-#                                                             # (ref) https://stackoverflow.com/questions/58956619/tensorflow-2-0-list-physical-devices-doesnt-detect-my-gpu
-
-# if physical_devices:
-    # tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
-# else: 
-#     print("No GPU")
 
 # ================================================================= #
 #                             Functions                             #
@@ -58,15 +42,12 @@ def model_inference(image_input, interpreter, input_details, output_details ):
 
     return  boxes, pred_conf 
 
-
-
 def main(_argv):
     config = ConfigProto()
     config.gpu_options.allow_growth = True    
     session = InteractiveSession(config=config)
     STRIDES, ANCHORS, NUM_CLASS, XYSCALE = utils.load_config(FLAGS)
     input_size = FLAGS.size
-
 
     """ init. Webcam object 
     """
@@ -156,6 +137,10 @@ def main(_argv):
 # %%
 
 if __name__ == '__main__':
+    # ###
+    # print(tf.config.threading.get_inter_op_parallelism_threads()) # 0 denotes an appropriate number of threads for the system
+    # print(tf.config.threading.get_intra_op_parallelism_threads())
+    # ### 
     try:
         app.run(main)
 
