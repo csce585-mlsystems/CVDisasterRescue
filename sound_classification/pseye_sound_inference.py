@@ -42,6 +42,7 @@ while True:
     print("Finished recording")
 
     filename = f'test{count}.wav'
+    print(filename)
 
     wf = wave.open(filename, "wb")
     # set the channels
