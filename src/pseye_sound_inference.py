@@ -3,7 +3,6 @@ import numpy as np
 import pyaudio, wave, os, librosa
 from playsound import playsound
 from preprocess import preprocess
-import matplotlib.pyplot as plt
 
 p = pyaudio.PyAudio()
 
@@ -33,6 +32,10 @@ def main(buffer):
     print("Recording audio...")
 
     count = 0
+    
+    # make temporary directory to store wav files
+    os.mkdir('temp_wav_recording_storage')
+
     while True:
         frames = []
         for i in range(int(sample_rate/chunk * record_seconds)):
@@ -42,7 +45,7 @@ def main(buffer):
 
         print("Finished recording")
 
-        filename = f'test{count}.wav'
+        filename = f'temp_wav_recording_storage/test{count}.wav'
         print(filename)
 
         wf = wave.open(filename, "wb")
@@ -95,7 +98,7 @@ def main(buffer):
             print(f"Nonhuman Sound! With prediction value: {prediction}")
 
         count += 1
-        # os.remove(filename)
+        # os.rmdir('temp_wav_recording_storage')
 
 # if __name__ == '__main__':
 #     main()
