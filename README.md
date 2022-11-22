@@ -7,9 +7,13 @@ The project proposal PDF document is linked [here.](/proposal/proposal.pdf)
 Milestone materials can be found [here.](/milestones)
 * [Milestone 1 Document](/milestones/milestone1.pdf)
 * [Milestone 2 Document](/milestones/milestone2.pdf)
+* [Milestone 3 Document](/milestone/milestone3.pdf)
 
 ## Source
 All working code and demonstration is found in the `src` folder.
+
+## Resources
+Figures, `.ipynb` files, appendices, video presentations, and other important resources primarily for the final report will be kept in `resources`.
 
 ## Build Notes
 While the project can be run using the native webcam of a laptop or other such USB webcam and microphone array, for demonstration as well as building purposes, we have decided to use the PlayStation Eye accessory, which contains both a camera and microphone array in one.

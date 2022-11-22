@@ -3,7 +3,7 @@ from threading import Thread
 
 import pseye_sound_inference as psi
 import webcam_person_detection_pseye as wpdp
-from pseye_channel_filter import return_loudest_channel as rlc
+# from pseye_channel_filter import return_loudest_channel as rlc
 
 # PlayStation Eye Sound Inference class to be used with threading
 
