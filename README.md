@@ -7,7 +7,7 @@ The project proposal PDF document is linked [here.](/proposal/proposal.pdf)
 Milestone materials can be found [here.](/milestones)
 * [Milestone 1 Document](/milestones/milestone1.pdf)
 * [Milestone 2 Document](/milestones/milestone2.pdf)
-* [Milestone 3 Document](/milestone/milestone3.pdf)
+* [Milestone 3 Document](/milestones/milestone3.pdf)
 
 ## Source
 All working code and demonstration is found in the `src` folder.
