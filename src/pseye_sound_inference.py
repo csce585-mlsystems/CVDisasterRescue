@@ -2,7 +2,8 @@ import tensorflow as tf
 import numpy as np
 import pyaudio, wave, os, librosa
 from playsound import playsound
-from preprocess import preprocess
+from preprocess_v3 import preprocess
+from pseye_channel_filter import return_loudest_total_channel
 
 p = pyaudio.PyAudio()
 
@@ -66,7 +67,8 @@ def main(buffer):
         #print(decoded)
         spectrogram = preprocess(filename)
         # sound_model = tf.keras.models.load_model(r"C:\Users\Scrap\Downloads\sound_model3.h5")
-        sound_model = tf.keras.models.load_model(r"sound_model3.h5")
+        sound_model = tf.keras.models.load_model(r"sound_model7.h5")
+        
         #Tune using inter_op_parallelism_threads for best performance.
         prediction = sound_model(tf.expand_dims(spectrogram, axis=0)
     )
@@ -74,10 +76,11 @@ def main(buffer):
         if prediction > 0.45:
             # print(f"Human Sound! With prediction value: {prediction}")
             data, sample_rate = librosa.load(filename, sr=16000, mono=False)
-            loudest_channel = np.argmax(np.mean(data, axis=1))
-            print(loudest_channel)
+            average_loudest_channel = np.argmax(np.mean(data, axis=1))
             ut_last_modified = os.path.getmtime(filename)
-            match loudest_channel:
+            print(average_loudest_channel)
+            match average_loudest_channel:
+            # match return_loudest_total_channel(filename):
                     case 0:
                         print(f'Person was to the left of the microphone with confidence value {prediction}')
                     case 1:
