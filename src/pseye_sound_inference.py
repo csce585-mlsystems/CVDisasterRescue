@@ -67,7 +67,7 @@ def main(buffer):
         #print(decoded)
         spectrogram = preprocess(filename)
         # sound_model = tf.keras.models.load_model(r"C:\Users\Scrap\Downloads\sound_model3.h5")
-        sound_model = tf.keras.models.load_model(r"sound_model7.h5")
+        sound_model = tf.keras.models.load_model(r"sound_model3.h5")
         
         #Tune using inter_op_parallelism_threads for best performance.
         prediction = sound_model(tf.expand_dims(spectrogram, axis=0)
