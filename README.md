@@ -22,3 +22,5 @@ In order to use the PlayStation Eye accessory, you will need to install the appr
 
 All other dependencies are listed in `src/dependencies.txt` and can be installed simply using `pip install -r src/dependencies.txt`. Some of the dependencies may be large, and you may want them to be isolated. In that case, we recommend using a Python virtual environment in order to isolate installed dependencies from the rest of the system. 
 
+## Demonstration
+Once all dependencies and PlaystationEye drivers are installed and the PlayStation Eye is connected, you can run our project from the root directory using the command `cd src && python3 demo.py`.
