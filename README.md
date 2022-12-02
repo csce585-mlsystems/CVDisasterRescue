@@ -14,6 +14,9 @@ All working code and demonstration is found in the `src` folder.
 
 ## Resources
 Figures, `.ipynb` files, appendices, video presentations, and other important resources primarily for the final report will be kept in `resources`.
+* [Final Paper](/resources/final_paper.pdf)
+* [Final Presentation](/resources/final_presentation.pdf)
+* [Presentation and Demonstration Video](https://youtu.be/fG5loQJsSPE)
 
 ## Build Notes
 While the project can be run using the native webcam of a laptop or other such USB webcam and microphone array, for demonstration as well as building purposes, we have decided to use the PlayStation Eye accessory, which contains both a camera and microphone array in one.

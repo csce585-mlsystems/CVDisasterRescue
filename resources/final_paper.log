@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  2 DEC 2022 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  2 DEC 2022 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,17 +569,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-<full_diagram.pdf, id=20, 1205.2528pt x 778.77142pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<full_diagram.pdf, id=17, 1205.2528pt x 778.77142pt>
 File: full_diagram.pdf Graphic file (type pdf)
 <use full_diagram.pdf>
-Package pdftex.def Info: full_diagram.pdf  used on input line 63.
+Package pdftex.def Info: full_diagram.pdf  used on input line 59.
 (pdftex.def)             Requested size: 234.8775pt x 151.7588pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -591,17 +587,42 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.71 
+l.67 
       <./full_diagram.pdf>]
-<localization_test.pdf, id=31, 462.52798pt x 346.89601pt>
+<nn_diagram.pdf, id=29, 1906.9504pt x 1170.94312pt>
+File: nn_diagram.pdf Graphic file (type pdf)
+<use nn_diagram.pdf>
+Package pdftex.def Info: nn_diagram.pdf  used on input line 74.
+(pdftex.def)             Requested size: 234.8775pt x 144.22346pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 83.
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.30003pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.30003pt}.
+
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.88 
+      <./nn_diagram.pdf>]
+<localization_test.pdf, id=823, 462.52798pt x 346.89601pt>
 File: localization_test.pdf Graphic file (type pdf)
 <use localization_test.pdf>
-Package pdftex.def Info: localization_test.pdf  used on input line 78.
+Package pdftex.def Info: localization_test.pdf  used on input line 93.
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
-<sound_model_accuracy_chart.pdf, id=32, 462.52798pt x 346.89601pt>
+<sound_model_accuracy_chart.pdf, id=824, 462.52798pt x 346.89601pt>
 File: sound_model_accuracy_chart.pdf Graphic file (type pdf)
 <use sound_model_accuracy_chart.pdf>
-Package pdftex.def Info: sound_model_accuracy_chart.pdf  used on input line 80.
+Package pdftex.def Info: sound_model_accuracy_chart.pdf  used on input line 99.
 
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
 
@@ -613,51 +634,59 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 3.30003pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.30003pt}.
 
-[3]
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.107 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.107 
+       <./localization_test.pdf> <./sound_model_accuracy_chart.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./sound_model_accuracy_chart
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+21.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.30003pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.30003pt}.
 
-[4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.90 \end{document}
-                   
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.90 \end{document}
-                   
-
- <./localization_test.pdf> <./sound_model_accuracy_chart.pdf
-
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./sound_model_accuracy_chart
-.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./final_paper.aux)
+[5] (./final_paper.aux)
 Package rerunfilecheck Info: File `final_paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14320 strings out of 478268
- 242634 string characters out of 5846348
- 616844 words of memory out of 5000000
- 32093 multiletter control sequences out of 15000+600000
- 491911 words of font info for 165 fonts, out of 8000000 for 9000
+ 14396 strings out of 478268
+ 243784 string characters out of 5846348
+ 613844 words of memory out of 5000000
+ 32139 multiletter control sequences out of 15000+600000
+ 492876 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,11n,92p,1932b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,11n,92p,2102b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb>
-Output written on final_paper.pdf (4 pages, 161352 bytes).
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dis
+t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb>
+Output written on final_paper.pdf (5 pages, 281434 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
- 36892 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 883 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 40481 words of extra memory for PDF output out of 42996 (max. 10000000)
 
