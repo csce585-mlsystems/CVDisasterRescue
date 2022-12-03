@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  2 DEC 2022 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.5)  2 DEC 2022 20:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -472,7 +472,21 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count304
 \l__pdf_internal_box=\box59
 )
-(./final_paper.aux)
+(./final_paper.aux
+
+./final_paper.aux:36: Package natbib Error: Bibliography not compatible with au
+thor-year citations.
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...mand\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? 
+)
 \openout1 = `final_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -508,8 +522,7 @@ LaTeX Info: Redefining \showhyphens on input line 28.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -571,10 +584,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<full_diagram.pdf, id=17, 1205.2528pt x 778.77142pt>
+<full_diagram.pdf, id=23, 1205.2528pt x 778.77142pt>
 File: full_diagram.pdf Graphic file (type pdf)
 <use full_diagram.pdf>
-Package pdftex.def Info: full_diagram.pdf  used on input line 59.
+Package pdftex.def Info: full_diagram.pdf  used on input line 57.
 (pdftex.def)             Requested size: 234.8775pt x 151.7588pt.
 
 
@@ -587,20 +600,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.67 
+l.64 
       <./full_diagram.pdf>]
-<nn_diagram.pdf, id=29, 1906.9504pt x 1170.94312pt>
+<nn_diagram.pdf, id=40, 1906.9504pt x 1170.94312pt>
 File: nn_diagram.pdf Graphic file (type pdf)
 <use nn_diagram.pdf>
-Package pdftex.def Info: nn_diagram.pdf  used on input line 74.
+Package pdftex.def Info: nn_diagram.pdf  used on input line 71.
 (pdftex.def)             Requested size: 234.8775pt x 144.22346pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 83.
+(Font)              <7> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 83.
+(Font)              <5> on input line 80.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -612,17 +625,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.88 
-      <./nn_diagram.pdf>]
-<localization_test.pdf, id=823, 462.52798pt x 346.89601pt>
+l.84 I
+      f our human-generated sound detection model detects a person, it will ...
+ <./nn_diagram.pdf>]
+<localization_test.pdf, id=839, 462.52798pt x 346.89601pt>
 File: localization_test.pdf Graphic file (type pdf)
 <use localization_test.pdf>
-Package pdftex.def Info: localization_test.pdf  used on input line 93.
+Package pdftex.def Info: localization_test.pdf  used on input line 90.
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
-<sound_model_accuracy_chart.pdf, id=824, 462.52798pt x 346.89601pt>
+<sound_model_accuracy_chart.pdf, id=840, 462.52798pt x 346.89601pt>
 File: sound_model_accuracy_chart.pdf Graphic file (type pdf)
 <use sound_model_accuracy_chart.pdf>
-Package pdftex.def Info: sound_model_accuracy_chart.pdf  used on input line 99.
+Package pdftex.def Info: sound_model_accuracy_chart.pdf  used on input line 96.
 
 (pdftex.def)             Requested size: 234.8775pt x 176.15768pt.
 
@@ -639,13 +653,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.107 
+l.103 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.107 
+l.103 
        <./localization_test.pdf> <./sound_model_accuracy_chart.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./sound_model_accuracy_chart
@@ -653,29 +667,181 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./sound_model_accuracy_chart
 >]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-21.
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+Underfull \hbox (badness 1028) in paragraph at lines 115--116
+\OT1/ptm/m/n/10 (+20) pa-per and our project can be found at our project's
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 115--116
+\OT1/ptm/m/n/10 (+20) GitHub repos-i-tory here: [][]$\OT1/pcr/m/n/10 https : / 
+/ github . com /
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 120--121
+[]\OT1/ptm/m/n/10 (+20) R. Ho-raud, \Audio-Visual Fu-sion for Human-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\OT1/ptm/m/n/10 (+20) Robot In-ter-ac-tion." [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+[][]$\OT1/pcr/m/n/10 http : / / perception . inrialpes . fr /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\OT1/pcr/m/n/10 Free _ Access _ Data / dataChallenge /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\OT1/pcr/m/n/10 DataScienceInstitute-[]10Oct2017 . pdf.$[][]
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.30003pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.30003pt}.
 
-[5] (./final_paper.aux)
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+[][]$\OT1/pcr/m/n/10 http : / / hockenmaier . cs . illinois . edu /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+\OT1/pcr/m/n/10 Framing _ Image _ Description / KCCA . html.$[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+[]\OT1/ptm/m/n/10 (+20) D. Ly-ong, \Doranlyong/yolov4-tiny-tflite-for-
+ []
+
+
+Underfull \hbox (badness 6542) in paragraph at lines 135--136
+\OT1/ptm/m/n/10 (+20) Tiny-tflite," Do-ran-Ly-ong / yolov4-tiny-tflite-for-
+ []
+
+
+Underfull \hbox (badness 7486) in paragraph at lines 135--136
+\OT1/ptm/m/n/10 (+20) person-detection, 19-Jun-2022. [On-line]. Avail-
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 135--136
+\OT1/ptm/m/n/10 (+20) able: [][]$\OT1/pcr/m/n/10 https : / / github . com / Dor
+anLyong /
+ []
+
+
+Overfull \hbox (23.9824pt too wide) in paragraph at lines 135--136
+\OT1/pcr/m/n/10 yolov4-[]tiny-[]tflite-[]for-[]person-[]detection$[][]\OT1/ptm/
+m/n/10 (-20) .
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 138--139
+[]\OT1/ptm/m/n/10 (+20) B. K, \Au-dio clas-si-fi-ca-tion with Deep Learn-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+\OT1/ptm/m/n/10 (+20) ing," Pa-perspace Blog, 01-Jul-2022. [On-line].
+ []
+
+
+Overfull \hbox (29.4824pt too wide) in paragraph at lines 138--139
+\OT1/pcr/m/n/10 audio-[]classification-[]with-[]deep-[]learning/$[][]\OT1/ptm/m
+/n/10 (-20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[]\OT1/ptm/m/n/10 (+20) K. Doshi, \Au-dio deep learn-ing made sim-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+\OT1/ptm/m/n/10 (+20) ple: Sound clas-si-fi-ca-tion, step-by-step,"
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+\OT1/ptm/m/n/10 (+20) Medium, 21-May-2021. [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+[][]$\OT1/pcr/m/n/10 https : / / towardsdatascience . com /
+ []
+
+
+Overfull \hbox (254.4824pt too wide) in paragraph at lines 141--142
+\OT1/pcr/m/n/10 audio-[]deep-[]learning-[]made-[]simple-[]sound-[]classificatio
+n-[]step-[]by-[]step-[]cebc936bbe5$[][]\OT1/ptm/m/n/10 (-20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[]\OT1/ptm/m/n/10 (+20) \Rectified lin-ear units im-prove re-stricted
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+\OT1/ptm/m/n/10 (+20) Boltz-mann ma-chines." [On-line]. Avail-able:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[][]$\OT1/pcr/m/n/10 https : / / www . cs . toronto . edu / []fritz /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+\OT1/pcr/m/n/10 absps / reluICML . pdf$[][]\OT1/ptm/m/n/10 (+20) . [Ac-cessed: 
+02-Dec-
+ []
+
+
+Underfull \hbox (badness 1596) in paragraph at lines 147--148
+[]\OT1/ptm/m/n/10 (+20) S. Ioffe and C. Szegedy, \Batch nor-mal-iza-tion:
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 147--148
+\OT1/ptm/m/n/10 (+20) Ac-cel-er-at-ing deep net-work train-ing by re-duc-ing
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 147--148
+\OT1/ptm/m/n/10 (+20) in-ter-nal co-vari-ate shift," arXiv.org, 02-Mar-2015.
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.30003pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.30003pt}.
+
+[6
+
+] (./final_paper.aux)
 Package rerunfilecheck Info: File `final_paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14396 strings out of 478268
- 243784 string characters out of 5846348
- 613844 words of memory out of 5000000
- 32139 multiletter control sequences out of 15000+600000
- 492876 words of font info for 178 fonts, out of 8000000 for 9000
+ 14419 strings out of 478268
+ 243793 string characters out of 5846348
+ 614995 words of memory out of 5000000
+ 32148 multiletter control sequences out of 15000+600000
+ 493378 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,11n,92p,2102b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,12n,92p,2926b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -683,10 +849,10 @@ ive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb>
-Output written on final_paper.pdf (5 pages, 281434 bytes).
+Output written on final_paper.pdf (6 pages, 293516 bytes).
 PDF statistics:
- 883 PDF objects out of 1000 (max. 8388607)
- 593 compressed objects within 6 object streams
- 23 named destinations out of 1000 (max. 500000)
- 40481 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 928 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 38945 words of extra memory for PDF output out of 42996 (max. 10000000)
 
